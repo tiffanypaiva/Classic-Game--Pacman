@@ -200,17 +200,7 @@ class vector(collections.Sequence):
 
         return (Self.x ** 2 + Self.y ** 2) ** 0.5
 
-    def rotate(Self, angle):
 
-        if Self._hash is not None:
-            raise ValueError('rotatation of vector cannot happen after hashing')
-        radians = angle * math.pi / 180.0
-        cosine = math.cos(radians)
-        sine = math.sin(radians)
-        x = Self.x
-        y = Self.y
-        Self.x = x * cosine - y * sine
-        Self.y = y * cosine + x * sine
 
     def __repr__(Self):
 
